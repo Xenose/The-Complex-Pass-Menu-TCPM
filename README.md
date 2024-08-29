@@ -11,3 +11,16 @@ as I wanted more functionality.
 * Insert OTP
 * Exporting to KeepassXC using KeepassXC-cli
 
+## Command line options
+* No command will launch the password menu interface.
+* otp  : Will launch the one time password menu.
+* menu : Will launch the options menu.
+
+## Hyprland configuration example
+~/.config/hypr/hyprland.conf
+
+```
+bind = $mainMod, O, exec, ~/.scripts/The-Complex-Pass-Menu-TCPM/source/tcpm.sh
+bind = $mainMod, I, exec, ~/.scripts/The-Complex-Pass-Menu-TCPM/source/tcpm.sh --otp
+bind = $mainMod, U, exec, ~/.scripts/The-Complex-Pass-Menu-TCPM/source/tcpm.sh --menu
+```
