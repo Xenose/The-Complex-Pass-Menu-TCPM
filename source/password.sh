@@ -95,7 +95,7 @@ case "${MENU_SELECTED}" in
          fi
 
          FILE_CONTENT="$(eval "${PASSWORD_COMMAND}")${FILE_CONTENT}"
-         echo -e "${FILE_CONTENT}" | gpg --encrypt --recipient "$(cat ${VAULT_PATH}/.gpg-id)"
+         echo -e "${FILE_CONTENT}" | gpg --encrypt --recipient "$(cat ${VAULT_PATH}/.gpg-id)" > "${VAULT_PATH}/${FILENAME}.gpg"
 
          echo -e "\n${FILE_CONTENT}"
          notify-send "password copied to clipboard"
